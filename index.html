@@ -1,0 +1,19 @@
+﻿<script>
+    var showMessage = msg => {
+        document.getElementById("message").innerHTML = msg;
+        return msg + "を画面に表示してやったぞ"
+    }
+
+    var showCsMessage = () => {
+        var msg = document.getElementById("txt").value;
+        chrome.webview.hostObjects.JsBridge.MessageShow(msg);
+    }
+
+</script>
+
+<div id="message">はろわ</div>
+
+<form>
+    <input type="text" id="txt" value="WEBの文字">
+    <input type="button" value="C#へ" onclick="showCsMessage()">
+</form>

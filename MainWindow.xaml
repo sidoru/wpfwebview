@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfWebView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:local="clr-namespace:WpfWebView"
+        mc:Ignorable="d"
+        Title="WebViewTest" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <wv2:WebView2 DockPanel.Dock="Top" Name="webView" Source="http://rosemaster.jp/" Grid.ColumnSpan="2">
+        </wv2:WebView2>
+        
+        <TextBox Name="messageTextBox" Text="これはWPFのテキストボックスに入力した文字" Grid.Row="1" />
+        <Button Grid.Row="1" Grid.Column="1" Content="JSへ" Padding="10,0" Click="Button_Click" />
+    </Grid>
+</Window>
