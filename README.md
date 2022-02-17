@@ -1,2 +1,2 @@
-WPF��WebView2�ǂ�Ȃ��̂�����
+WPFでWebView2どんなものか検証
 
